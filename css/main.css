@@ -1,0 +1,208 @@
+@font-face { font-family: Century; src: url('GOTHIC.ttf'); }
+
+body{
+    font-family: Century;
+    background: rgb(51,51,51);
+    padding:20px;
+   
+    
+}
+
+p{
+	font-weight:normal;
+}
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+
+background: #e5c6a7;
+color: #000000;
+text-shadow: none;
+}
+
+.text {
+	
+	color: black;
+	text-shadow: none;
+	font-style: normal;
+}
+
+.ul{
+	
+	color: black;
+	text-shadow: none;
+	font-style: normal;
+}
+.tile1{
+  width:300px;
+  height:88px;
+  background:#988f7b;
+  
+  margin-top:10px;
+  margin-left: 10px;
+  float: left;
+  border-radius:5px;
+}
+div.tile1 p{
+	text-align: center;
+	margin-top: 33px;
+	font-weight:normal;
+}
+ 
+.tile2{
+  width:93px;
+  height:93px;
+  background:#f68557;
+  float:left;
+  margin-left:10px;
+  margin-top: 10px;
+  border-radius:5px;
+ 
+  border-radius:5px;
+  background-image: url(images/twitter.png);
+  background-size:50px 50px;
+}
+
+.tile3{
+  width:93px;
+  height:93px;
+  background:#669e93;
+  float:left;
+  margin-left:10px;
+  margin-top: 10px;
+  background-size: auto;
+  border-radius:5px;
+}
+
+.tile4{
+  width:93px;
+  height:93px;
+  background:#6080ab;
+  float:left;
+  margin:10px;
+  margin-top: 10px;
+  border-radius:5px;
+}
+
+.tile5{
+  width:93px;
+  height:93px;
+  background:#6b4141;
+  float:left;
+  margin-left:10px;
+  border-radius:5px;
+ 
+}
+
+.tile6{
+  width:93px;
+  height:93px;
+  background:#91b5c2;
+  float:left;
+  margin-left:10px;
+  border-radius:5px;
+  
+}
+
+.tile7{
+  width:93px;
+  height:93px;
+  background:#988f7b;
+  float:left;
+  margin-left:10px;
+  border-radius:5px;
+  
+}
+
+.tile8{
+  width:93px;
+  height:93px;
+  background:#bb8c8f;
+  float:left;
+  margin-left:10px;
+  margin-top: 10px;
+  border-radius:5px;
+}
+
+.tile9{
+  width:93px;
+  height:93px;
+  background:#669e93;
+  float:left;
+  margin-left:10px;
+  margin-top: 10px;
+  border-radius:5px;
+}
+
+.tile10{
+  width:93px;
+  height:93px;
+  background:#6b4141;
+  float:left;
+  margin:10px;
+  margin-top: 10px;
+  border-radius:5px;
+}
+
+.soundcloud{
+	margin-left: 16px;
+	margin-top: 24px;
+	height:40px;
+	width: 60px;
+	
+}
+.instagram{
+	margin-left: 16px;
+	margin-top: 16px;
+	height: 60px;
+	width: 60px;
+	
+}
+.discussion{
+	margin-left: 16px;
+	margin-top: 18px;
+	height: 60px;
+	width: 60px;
+	
+}
+.espn{
+	margin-left: 16px;
+	margin-top: 16px;
+	height: 60px;
+	width: 60px;	
+}
+.ul{
+	float: left;
+	
+}
+
+.weather{
+	margin-left: 4px;
+	margin-top: 11px;
+	height: 80px;
+	width: 80px;	
+}
+
+.maps{
+	margin-left: 30px;
+	margin-top: 25px;
+	height: 50px;
+	width: 30px;	
+}
+
+.twitter{
+	margin-left: 16px;
+	margin-top: 16px;
+	height: 65px;
+	width: 65px;
+	
+}
+
+body{
+    font-family: Century;
+    color: #fff;
+    padding:20px;
+    font-weight:normal;
+}
+
+.selecionado{
+    background-color: #483D8B;
+}

@@ -1,223 +1,386 @@
-<!DOCTYPE <html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-            <title>Accordion Multi Menu</title>
-            <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
-            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-          
-            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-            <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-            <link rel='stylesheet' type='text/css' href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" />
-                
-            <link rel="stylesheet" href="css/main.css" />
-             
-                </head>
-                
-                <body>
-                <div data-role="page" id="home">
-                
-                <div class="tile1" class="clickme">
-                <p>MICHAEL BAIN AVF 1311</p>
-                </div>
-                
-                <a href="#twitter">
-                <div class="tile2 clickme">
-                <img src="images/twitter.png" class="twitter" alt="twitter" height="100" width="100">
-                </div>
-                </a>
-                <div class="tile3 clickme">
-                <img src="images/soundcloud.png" class="soundcloud">
-                </div>
-                
-                <a href="#instagram" id="insta">
-                <div class="tile4 clickme">
-                <img src="images/instagram.png" class="instagram">
-                </div>
-                
-                <a href="#espn" id="sport">
-                <div class="tile5 clickme">
-                <img src="images/espn.png" class="espn">
-                </div>
-                </a>
-                
-                
-                <div class="tile6 clickme">
-                <img src="images/weather.png" class="weather">
-                </div>
-                
-                <div class="tile7 clickme">
-                <img src="images/maps.png" class="maps">
-                </div>
-                <a href="#discussion" id="talks">
-                <div class="tile8 clickme">
-                <img src="images/discussion.png" class="discussion">
-                </div></a>
-                
-                <div class="tile9 clickme">
-                </div>
-                
-                <div class="tile10 clickme">
-                </div>
-                </div>
-                
-                
-                </div>
-                
-                <div data-role="page" id="newpage">
-                
-                </div>
-                
-                <!--TWITTER--------------------------------------------------------------->
-                <div data-role="page" id="twitter">
-                <div data-role="footer" data-position="fixed">
-                <a href="#home" data-icon="home">Home</a>
-                
-                </div>
-                
-                <div data-role="content">
-                <h2>Twitter</h2>
-                <a class="twitter-timeline" href="https://twitter.com/Evidence" data-widget-id="395201486386249728">Tweets by @Evidence</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                
-                
-                </div>
-                </div>
-                
-                
-                <!--ESPN------------------------------------------------------->
-                <div data-role="page" id="espn" >
-                <div data-role="footer" data-position="fixed">
+        <title>Example 20-1</title>
+        <meta name="viewport" content="width=device-width,
+        height=device-height initial-scale=1.0,
+        maximum-scale=1.0, user-scalable=no" />
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css"/>
+        <script type="text/javascript" charset="utf-8" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        
+        
+    </head>
+    <body>
+        
+        <!--Home-->
+        
+        <div id="home" data-role="page" data-theme="b">
+            
+            <section id="native">
+                <p id="myname">Michael Bain AVF1311<p>
+                <section data-role="content">
+                    <ul data-role="listview" data-inset="true" data-divider-theme="d">
+                        <li data-role="list-divider">Android/IOS Native</li>
+                        <li><a href="#connections">Network</a></li>
+                        <li><a href="#cameraPage">Camera</a></li>
+                        <li><a href="#music">Media Player</a></li>
+                        <li><a href="#alertPage">Notification</a></li>
+                        <li><a href="#geoPage">GEOLOCATION</a></li>
+                    </ul>
+                    
+                    <section id="api">
+                        <ul data-role="listview" data-inset="true" data-divider-theme="d">
+                            <li data-role="list-divider">API's</li>
+                            <li><a href="#instaPage">Instagram</a></li>
+                            <li><a href="#espnPage">ESPN</a></li>
+                           
+                            
+                        </ul>
+                        
+                        
+                    </section>
+                    <section id="discussion">
+                        <ul data-role="listview" data-inset="true" data-divider-theme="d">
+                            <li data-role="list-divider">Research Discussions</li>
+                            <li><a href="#week1">Week 1</a></li>
+                            <li><a href="#week2">Week 2</a></li>
+                            <li><a href="#">Week 3</a></li>
+                            <li><a href="#">Week 4</a></li>
+                            
+                        </ul>
+                        
+                        
+                    </section>
+                    
+                </section>
+            </section>
+        </div>
+        
+        
+        <!--My music page-->
+        
+        <div data-role="page" id="music" data-theme="b">
+            <div data-role="content">
+            <a href="#" class="btnlarge"data-role="button" id="play">Play</a>
+            <a href="#" class="btnlarge" data-role="button" id="pause">Pause</a>
+            <a href="#" class="btnlarge" data-role="button" id="stop">Stop</a>
+            <p id="audio_position"> </p>
+            
+            
+            <div data-role="footer" data-position="fixed" >
                 
                 <a href="#home" data-icon="home">Home</a>
+                <a href="#home" data-icon="back">Back</a>
+                <a href="#home" data-icon="home">About</a>
                 
-                </div>
                 
-                <div data-role="content" class="text">
+            </div>
+            
+                
+                
+            </div>
+        </div>
+        
+        <!--ESPN page------->
+        
+        <div data-role="page" id="espnPage" data-theme="b">
+            <div data-role="content">
+            <a href="#espn" class="btnlarge"data-role="button" id="sports">ESPN FEED</a>
+            
+            
+            <div data-role="footer" data-position="fixed" >
+                
+                <a href="#home" data-icon="home">Home</a>
+                <a href="#home" data-icon="back">Back</a>
+                <a href="#home" data-icon="home">About</a>
+                
+                
+            </div>
+            
+      
+                
+                
+            </div>
+        </div>
+        
+        <div data-role="page" id="espn" data-theme="b">
+            <div data-role="content">
                 <h2>ESPN HEADLINES</h2>
                 
-                <ul class="headlines" class="ul"></ul>
+                <ul class="headlines" class="ul">hello</ul>
+            </div>
+            
+            <div data-role="footer" data-position="fixed" >
                 
+                <a href="#home" data-icon="home">Home</a>
+                <a href="#home" data-icon="back">Back</a>
+                <a href="#home" data-icon="home">About</a>
+                
+                
+            </div>
+            
+            
+            
+            
+        </div>
+        </div>
+        
+        <!--LOCATION page------->
+        
+        <div data-role="page" id="geoPage" data-theme="b">
+            <div data-role="content">
+            <a href="#displaymap"data-role="button" id="geo">My Location</a>
+            
+            
+            <div data-role="footer" data-position="fixed" >
+                
+                <a href="#home" data-icon="home">Home</a>
+                <a href="#home" data-icon="back">Back</a>
+                <a href="#home" data-icon="home">About</a>
+                
+                
+            </div>
+                
+            </div>
+        </div>
+        
+        <div data-role="page" id="displaymap" data-theme="b">
+            <div data-role="content">
+                <h2>LOCATION</h2>
+                
+                <p id="geolocation">Finding geolocation...</p>
+            </div>
+            
+            <div data-role="footer" data-position="fixed" >
+                
+                <a href="#home" data-icon="home">Home</a>
+                <a href="#home" data-icon="back">Back</a>
+                <a href="#home" data-icon="home">About</a>
+                
+                
+            </div>
+            
+            
+            
+            
+        </div>
+        </div>
+        <!-----Instagram--------->
+        
+        <div data-role="page" id="instaPage" data-theme="b">
+            <div data-role="content">
+                <a href="#instagram" class="btnlarge"data-role="button" id="insta">INSTAGRAM</a>
+                
+                
+                <div data-role="footer" data-position="fixed" >
+                    
+                    <a href="#home" data-icon="home">Home</a>
+                    <a href="#home" data-icon="back">Back</a>
+                    <a href="#home" data-icon="home">About</a>
+                    
+                    
                 </div>
-                </div>
-                <!--INSTAGRAM------------------------------------------------------->
-                <div data-role="page" id="instagram">
-                <div data-role="footer" data-position="fixed">
+                
+                
+                
+                
+            </div>
+        </div>
+
+        
+        <div data-role="page" id="instagram">
+            <div data-role="footer" data-position="fixed">
                 
                 <a href="#home" data-icon="home">Home</a>
                 
-                </div>
-                <div data-role="content" class="text">
+            </div>
+            <div data-role="content" class="text">
                 <h1>Instagram</h1>
                 
                 <ul id="data-output">
-                
-                <li id="data-msg">
-                <h2>Searching Instagram....</h2>
-                </li>
+                    
+                    <li id="data-msg">
+                        <h2>Searching Instagram....</h2>
+                    </li>
                 </ul>
                 
+            </div>
+        </div>
+        
+        <!--Notification page------->
+        
+        <div data-role="page" id="alertPage" data-theme="b">
+           
+            <div data-role="content">
+                <a href="#" class="btnlarge"data-role="button" id="alert">Notification</a>
+                
+               <p>Show the alert</p>
+               <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+                
+                <div data-role="footer" data-position="fixed" >
+                    
+                    <a href="#home" data-icon="home">Home</a>
+                    <a href="#home" data-icon="back">Back</a>
+                    <a href="#home" data-icon="home">About</a>
+                    
+                    
                 </div>
-                </div>
-                <!--DISCUSSIONS----------------------------------------------------------->
-                
-                <div data-role="page" id="discussion">
-                <div data-role="footer" data-position="fixed">
-                
-                <a href="#home" data-icon="home">Home</a>
-                
-                </div>
-                <ul data-role="listview" data-inset="true" data-divider-theme="d">
-                
-                <li><a href="#week1">Week 1</a></li>
-                <li><a href="#week2">Week 2</a></li>
-                <li><a href="#">Week 3</a></li>
-                <li><a href="#">Week 4</a></li>
-                
-                </ul>
+            </div>
+        </div>
+        
+        
+        <!--CAMERA page------->
+        
+        <div data-role="page" id="cameraPage" data-theme="b">
+            <div data-role="content">
+                <a href="#"data-role="button" id="camera">Take Picture</a><br>
+                <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
                 
                 
-                </div>
-                </div>
-                <!--WEEK 1----------------------------------------------------------------------------->
-                <div id="week1" data-role="page" data-theme="c" class="text">
-                <div data-role="footer" data-position="fixed">
-                <a href="#home" data-icon="home">Home</a>
-                
-                </div>
-                
-                <div data-role="content" class="text">
-                <p><h3>1. Less obvious perks of using “live” data resources including logins and payments. How could Twitter be used in these two scenarios?</h3>
-                
-                Being able to login to different accounts with one Twitter password and user name makes it easier for the person with multiple accounts. There is always a catch from setups like this. You will usually have to agree to advertise for the brand in return for your linked accounts.  Making payments through Twitter could be useful if it can be as secure as Paypal.
-                
-                <h3>2. Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</h3>
-                
-                JSON-P allows us to access data from a different domain through HTML whereas it would be denied otherwise for security purposes. It is used to allow certain apps to access from RESTFull API’s.
-                
-                <h3>3. Based on the JSON-P search results: What data resource(s) do you think might pair well with types of Native device features?</h3>
-                
-                Camera: Flickr, Instagram<br>
-                Media Player: Soundcloud
-                
-                <h3>4. Please describe any design and functionality intentions you may have for your Demo app components this month.</h3>
-                
-                I want to implement soundcloud api in my app for this month
-                
-                <h3>5. Briefly describe some past “lessons learned” regarding workflow as it relates to research, design, development, etc.</h3>
-                
-                Organization is key as well as research. There have been times when I wanted to design my app a certain way but since I am new to coding I didn’t know how to accomplish it. Being that we are allotted only a certain amount of time to work on our apps I had to compromise.
-                </p>
-                
-                
-                </div>
+                <div data-role="footer" data-position="fixed" >
+                    
+                    <a href="#home" data-icon="home">Home</a>
+                    <a href="#home" data-icon="back">Back</a>
+                    <a href="#home" data-icon="home">About</a>
+                    
+                    
                 </div>
                 
-                <!--WEEK 2---------------------------------------------------------------------------------------------------------------------->
                 
-                <div id="week2" data-role="page" data-theme="c">
-                <div data-role="footer" data-position="fixed">
-                <a href="#home" data-icon="home">Home</a>
                 
+                
+            </div>
+        </div>
+        
+        <!--NETWORK page------->
+        
+        <div data-role="page" id="connections" data-theme="b">
+            
+            <div data-role="content">
+                <a href="#"data-role="button" id="network">Network Test</a>
+                
+                
+                <div data-role="footer" data-position="fixed" >
+                    
+                    <a href="#home" data-icon="home">Home</a>
+                    <a href="#home" data-icon="back">Back</a>
+                    <a href="#home" data-icon="home">About</a>
+                    
+                    
                 </div>
                 
-                <div data-role="content" class="text">
-                <p><h3>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance). </h3>
-                
-                I was a total newb when it came to coding until I started at Fullsail so I actually have never thought about app accessibility honestly. After doing some research I will definitely try to make my app accessible from the keyboard as much as possible. Another useful tool I discovered is an accessibility tester that’s is use to determine how unfriendly your app is to disabled users.
-                
-                <h3> Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h3>
-                
-                Aside from programming them to be able to read more complex webpage such as those that contain tables I don’t see how the  are frustrating. I think that web developers, Microsoft and Apple will have to work with screen reader builders in order to make a better experience for the user.
-                
-                <h3>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h3>
-                
-                IOS Iphone has a Braille dipsplay that supports Voicover.<br>
-                Blackberry has a Screen Reader .
-                
-                <h3>4. Please describe any design and functionality intentions you may have for your Demo app components this month.</h3>
-                
-                I want to implement soundcloud api in my app for this month
-                
-                <h3>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h3>
-                
-                1. IOS/LookTel Money Reader which seems like a very useful app.<br>
-                2.Light Detector
-                </p>
-                
-                
-                </div>    
-                
-                
-                
-                
-                <script type="text/javascript" src="phonegap.js"></script>
-                <script type="text/javascript" src="js/index.js"></script>
-                <script type="text/javascript" src="js/main.js"></script>
-                    app.initialize();
+            </div>
+        </div>
+        
+        
 
-              
-                </body>
-                
-                </html>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        
+        
+    </body>
+</html>
+
+
+
+<!--WEEK 1----------------------------------------------------------------------------->
+<div id="week1" data-role="page" data-theme="c" class="text">
+    <div data-role="footer" data-position="fixed">
+        <a href="#home" data-icon="home">Home</a>
+        
+    </div>
+    
+    <div data-role="content" class="text">
+        <p><h3>1. Less obvious perks of using “live” data resources including logins and payments. How could Twitter be used in these two scenarios?</h3>
+        
+        Being able to login to different accounts with one Twitter password and user name makes it easier for the person with multiple accounts. There is always a catch from setups like this. You will usually have to agree to advertise for the brand in return for your linked accounts.  Making payments through Twitter could be useful if it can be as secure as Paypal.
+        
+        <h3>2. Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</h3>
+        
+        JSON-P allows us to access data from a different domain through HTML whereas it would be denied otherwise for security purposes. It is used to allow certain apps to access from RESTFull API’s.
+        
+        <h3>3. Based on the JSON-P search results: What data resource(s) do you think might pair well with types of Native device features?</h3>
+        
+        Camera: Flickr, Instagram<br>
+        Media Player: Soundcloud
+        
+        <h3>4. Please describe any design and functionality intentions you may have for your Demo app components this month.</h3>
+        
+        I want to implement soundcloud api in my app for this month
+        
+        <h3>5. Briefly describe some past “lessons learned” regarding workflow as it relates to research, design, development, etc.</h3>
+        
+        Organization is key as well as research. There have been times when I wanted to design my app a certain way but since I am new to coding I didn’t know how to accomplish it. Being that we are allotted only a certain amount of time to work on our apps I had to compromise.
+        </p>
+        
+        
+    </div>
+</div>
+
+<!--WEEK 2---------------------------------------------------------------------------------------------------------------------->
+
+<div id="week2" data-role="page" data-theme="c">
+    <div data-role="footer" data-position="fixed">
+        <a href="#home" data-icon="home">Home</a>
+        
+    </div>
+    
+    <div data-role="content" class="text">
+        <p><h3>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance). </h3>
+        
+        I was a total newb when it came to coding until I started at Fullsail so I actually have never thought about app accessibility honestly. After doing some research I will definitely try to make my app accessible from the keyboard as much as possible. Another useful tool I discovered is an accessibility tester that’s is use to determine how unfriendly your app is to disabled users.
+        
+        <h3> Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h3>
+        
+        Aside from programming them to be able to read more complex webpage such as those that contain tables I don’t see how the  are frustrating. I think that web developers, Microsoft and Apple will have to work with screen reader builders in order to make a better experience for the user.
+        
+        <h3>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h3>
+        
+        IOS Iphone has a Braille dipsplay that supports Voicover.<br>
+        Blackberry has a Screen Reader .
+        
+        <h3>4. Please describe any design and functionality intentions you may have for your Demo app components this month.</h3>
+        
+        I want to implement soundcloud api in my app for this month
+        
+        <h3>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h3>
+        
+        1. IOS/LookTel Money Reader which seems like a very useful app.<br>
+        2.Light Detector
+        </p>
+       
+        
+    </div>
+     </div>
+  
+   
+
+  
+   
+    
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/notification.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    app.initialize();
+    
+    
+    </body>
+    
+</html>

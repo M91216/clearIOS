@@ -113,3 +113,10 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+.ui-btn{margin-left: 5%;
+        margin-right: 5%;
+
+}
+.ui-mobile#music{background-color: #DCDCDC;
+    
+}

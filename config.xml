@@ -49,5 +49,6 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="http://maps.google.com/*" />
     <access origin="http://espn.go.com/*" />
+    <access origin="http://twitter.com/*" />
     <content src="index.html" />
 </widget>

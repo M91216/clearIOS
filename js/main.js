@@ -44,18 +44,14 @@ var locationFn = function(){
     navigator.geolocation.getCurrentPosition(handle_geolocation_query);
 };
 function handle_geolocation_query(position){
-    var element = document.getElementById("geolocation");
-    
-    element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-    'Longitude: '          + position.coords.longitude             + '<br />' +
-    'Altitude: '           + position.coords.altitude              + '<br />' +
-    'Accuracy: '           + position.coords.accuracy              + '<br />' +
-    'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-    'Heading: '            + position.coords.heading               + '<br />' +
-    'Speed: '              + position.coords.speed                 + '<br />' +
-    'Timestamp: '          + new Date(position.timestamp)          + '<br />';
-    
-}
+    var image_url = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + "," +
+    position.coords.longitude + "&zoom=14&size=300x400&markers=color:blue|label:S|" +
+    position.coords.latitude + ',' + position.coords.longitude;
+    jQuery("#map").remove();
+    jQuery("#geolocation").append(
+                                 jQuery(document.createElement("img")).attr("src", image_url).attr('id','map')
+                                 );
+}  
 
 
 
@@ -164,7 +160,6 @@ var screenOutput = function(info){
            
            });
 };
-
 
 
 
